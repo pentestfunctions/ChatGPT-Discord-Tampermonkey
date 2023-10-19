@@ -34,4 +34,6 @@ Easily chat with ChatGPT using the combination of Tampermonkey, Discord, and Fla
 ## 📝 Note
 
 Any message containing `!askgpt` will trigger the script. It sends the message to ChatGPT and forwards the response back to the Discord server via a POST request.
-
+- It first takes the most recent messages in a discord server as they come in and sends them to the flask app.
+- The flask app then takes that input and handles it to ChatGPT.
+- It then sends a post request to the discord channel with the response.
